@@ -12,7 +12,7 @@ const isDebug = core.getInput('DEBUG')
 const dropbox = new Dropbox({accessToken, fetch: fetch2})
 
 function uploadMuhFile(filePath: string): Promise<any> {
-  const file = fs.readFileSync(filePath)
+  const file = fs.createReadStream(filePath)
   const destinationPath = `${dropboxPathPrefix}${filePath}`
   if (isDebug) console.log('uploaded file to Dropbox at: ', destinationPath)
   return dropbox

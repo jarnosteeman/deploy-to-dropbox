@@ -11,7 +11,7 @@ var dropboxPathPrefix = core.getInput('DROPBOX_DESTINATION_PATH_PREFIX');
 var isDebug = core.getInput('DEBUG');
 var dropbox = new Dropbox({ accessToken: accessToken, fetch: fetch2 });
 function uploadMuhFile(filePath) {
-    var file = fs.readFileSync(filePath);
+    var file = fs.createReadStream(filePath);
     var destinationPath = "" + dropboxPathPrefix + filePath;
     if (isDebug)
         console.log('uploaded file to Dropbox at: ', destinationPath);
