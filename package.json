@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc && ncc build dist/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node dist/main.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
     "@actions/core": "^1.2.3",
     "@actions/github": "^2.1.1",
     "@types/node": "^13.9.3",
-    "dropbox": "^4.0.30",
-    "glob": "^7.1.6"
+    "dropbox_session_upload": "^2.2.1",
+    "glob": "^7.1.7"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.0",
