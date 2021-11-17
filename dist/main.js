@@ -42,7 +42,7 @@ var glob = require('glob');
 var _a = require('dropbox_session_upload'), upload = _a.upload, progress = _a.progress;
 var API = 'https://content.dropboxapi.com/2/files/';
 var TOKEN = core.getInput('DROPBOX_ACCESS_TOKEN') ||
-    '-0V__pv1bugAAAAAAAAAATkaOea9rLmfSenku7DfdepC0Ow_Lk3Kc5aiulZArQIw';
+    '';
 var GLOB = core.getInput('GLOB') || 'sample/**.*';
 var DEST_PATH = core.getInput('DROPBOX_DESTINATION_PATH_PREFIX') || '/';
 var CWD = process.cwd();
